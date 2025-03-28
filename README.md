@@ -1,1 +1,3 @@
-# issue-labels
+# Issue labels
+
+Fetch and parse GitHub issue labels.
