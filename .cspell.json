@@ -9,5 +9,5 @@
     "softwareTerms"
   ],
   "ignorePaths": [".git"],
-  "words": ["bumpversion", "codacy", "giphy", "lefkowitz", "pinst"]
+  "words": ["bumpversion", "codacy", "giphy", "lefkowitz", "pinst", "millis"]
 }

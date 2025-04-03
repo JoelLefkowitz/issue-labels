@@ -1,5 +1,7 @@
 export interface Environment {
   token: string | null;
-  owner: string;
-  repo: string;
+  remote: {
+    owner: string;
+    repository: string;
+  };
 }

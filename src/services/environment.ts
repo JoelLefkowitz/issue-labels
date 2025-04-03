@@ -1,26 +1,31 @@
 import { Environment } from "../models/Environment.model";
 
 export const environment = (): Environment => {
-  const token = process.env.GITHUB_TOKEN ?? null;
-  const source = process.env.GITHUB_REPOSITORY;
+  const { GITHUB_REPOSITORY: remote, GITHUB_TOKEN: token } = process.env;
 
-  if (!source) {
+  if (!remote) {
     throw new Error("Missing a GITHUB_REPOSITORY environment variable");
   }
 
-  const [owner, repo] = source.split("/");
+  const [owner, repository] = remote.split("/");
 
   if (!owner) {
-    throw new Error(`Couldn't parse the owner name from ${source}`);
+    throw new Error(
+      `Could not parse the owner name from the GITHUB_REPOSITORY environment variable '${remote}'`,
+    );
   }
 
-  if (!repo) {
-    throw new Error(`Couldn't parse the repository name from ${source}`);
+  if (!repository) {
+    throw new Error(
+      `Could not parse the repository name from the GITHUB_REPOSITORY environment variable '${remote}'`,
+    );
   }
 
   return {
-    token,
-    owner,
-    repo,
+    token: token ?? null,
+    remote: {
+      owner,
+      repository,
+    },
   };
 };

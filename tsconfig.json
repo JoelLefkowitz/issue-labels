@@ -26,7 +26,7 @@
     "declaration": true,
     "importHelpers": false,
     "removeComments": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "allowJs": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

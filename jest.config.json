@@ -1,8 +1,8 @@
 {
-  "transform": {
-    "^.+\\.ts$": ["ts-jest", { "isolatedModules": true }]
-  },
+  "preset": "ts-jest",
   "modulePathIgnorePatterns": ["dist"],
   "collectCoverage": true,
-  "coveragePathIgnorePatterns": ["<rootDir>/src/testing"]
+  "coverageProvider": "v8",
+  "coveragePathIgnorePatterns": ["/node_modules/", "<rootDir>/tests"],
+  "setupFilesAfterEnv": ["<rootDir>/tests/setup.ts"]
 }
