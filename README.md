@@ -2,7 +2,7 @@
 
 Fetch and parse GitHub issue labels.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/issue-labels/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/issue-labels/review.yaml)
 ![Version](https://img.shields.io/npm/v/issue-labels)
 ![Downloads](https://img.shields.io/npm/dw/issue-labels)
 ![Size](https://img.shields.io/bundlephobia/min/issue-labels)
